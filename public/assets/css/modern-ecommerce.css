@@ -1,0 +1,46 @@
+/* Custom Form Styling */
+.auth-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.form-control-lg {
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+}
+
+/* Shop Filters */
+.filter-section {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Product Detail */
+.product-gallery img {
+    border-radius: 20px;
+}
+
+.quantity-selector {
+    max-width: 120px;
+    border-radius: 10px;
+}
+
+/* Table Design (Cart & Orders) */
+.table-modern thead {
+    background-color: #f8f9fa;
+}
+
+.table-modern th {
+    border-top: none;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.table-modern td {
+    vertical-align: middle;
+    padding: 15px;
+}

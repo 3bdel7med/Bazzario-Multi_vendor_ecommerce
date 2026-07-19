@@ -1,0 +1,57 @@
+services:
+  # 1. حاوية الـ PHP (Laravel Application)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel-app
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    volumes:
+      - .:/var/www
+    networks:
+      - laravel-network
+
+  # 2. حاوية الـ Nginx Web Server
+  webserver:
+    image: nginx:alpine
+    container_name: laravel-nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - laravel-network
+    depends_on:
+      - app
+
+  # 3. حاوية الـ MySQL Database
+  db:
+    image: mysql:8.4
+    container_name: laravel-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-laravel}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-root}
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - laravel-network
+
+# تعريف الشبكات والمساحات التخزينية المشتركة
+networks:
+  laravel-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local

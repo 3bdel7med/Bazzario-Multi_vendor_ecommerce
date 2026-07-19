@@ -1,0 +1,164 @@
+/* Core Layout Reset and Styling Variables */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FAF6F0; /* Soft Storefront Warm Cream Background */
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.vendor-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Modern Minimalist Sidebar */
+.vendor-sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.01);
+}
+
+.sidebar-brand h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    letter-spacing: -0.5px;
+}
+
+.label-vendor {
+    background-color: #1A1A1A;
+    border-radius: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.sidebar-nav {
+    margin-top: 40px;
+}
+
+.sidebar-nav li a {
+    color: #666666;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li.active a {
+    background-color: #F3EEE6 !important;
+    color: #000000 !important;
+}
+
+.sidebar-nav li a .glyphicon {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+/* Main Content Area adjustments */
+.vendor-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    letter-spacing: -0.5px;
+}
+
+.btn-action-black {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 500;
+}
+
+/* Modern Metric Cards Styles */
+.stat-card {
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.01);
+}
+
+.stat-card .card-value {
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.stat-card .card-label {
+    font-size: 14px;
+    color: #555555;
+}
+
+.stat-card .card-icon {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    font-size: 24px;
+    opacity: 0.25;
+}
+
+/* Store Colors Synced with Main Platform */
+.bg-mint { background-color: #E2F4EE; color: #0E4B37; }
+.bg-pink { background-color: #FFE6E6; color: #5F1A1A; }
+.bg-cream { background-color: #F5EFE4; color: #4A3B22; }
+.bg-white { background-color: #ffffff; }
+.border-subtle { border: 1px solid #ECE6DB; }
+.badge-pink { background-color: #FFE6E6; color: #5F1A1A; }
+
+/* Flat Panel Boxes */
+.dashboard-panel {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.01);
+}
+
+.panel-heading-custom {
+    margin-bottom: 20px;
+}
+
+.panel-title-custom {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Clean Form/Table resets for Bootstrap 3 */
+.modern-table > tbody > tr > td,
+.modern-table > thead > tr > th {
+    border-top: 1px solid #FAF6F0 !important;
+    padding: 16px 12px !important;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-progress { background-color: #FFF3CD; color: #856404; }
+.status-success { background-color: #D4EDDA; color: #155724; }
+
+/* Stock Alert Component styling */
+.alert-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #FAF6F0;
+}
+.alert-item h4 { font-size: 14px; margin: 0 0 4px 0; font-weight: 500; }
+.badge-stock-low { float: right; color: #856404; font-size: 11px; background: #FFF3CD; padding: 2px 8px; border-radius: 4px;}
+.badge-stock-out { float: right; color: #721C24; font-size: 11px; background: #F8D7DA; padding: 2px 8px; border-radius: 4px;}
